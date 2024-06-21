@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCSE Images</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            background-image: url(images/background.png);
+            background-size: contain;
+            background-position: center;
+            display: block;
+            color: #bfbfbf;
+        }
+
+        header {
+            background-color: #00000063;
+            text-align: center;
+            padding: 20px;
+            background-size: contain;
+            background-position: center;
+            display: block;
+        }
+
+        section {
+            max-width: 650px;
+            margin: 20px auto;
+            background-color: #1b1b1b;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            border-left: 5px solid #222222;
+            margin-bottom: 65px;
+        }
+
+        h2 {
+            color: #fff;
+            border-bottom: 2px solid #505050;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .image-item {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            margin: 10px;
+        }
+        .image-item-NA {
+            flex: 1;
+            min-width: 25px;
+            max-width: 30px;
+            margin: 10px;
+        }
+
+        .image-item img {
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .image-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .large-image {
+            display: none;
+            position: fixed;
+            top: 5%;
+            left: 5%;
+            width: 90%;
+            height: 90%;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .large-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .close-btn {
+            display: block;
+            text-align: center;
+            cursor: pointer;
+            color: #fff;
+            font-size: 1.5em;
+        }
+
+        .close-btn:hover {
+            color: #8d8d8d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Achieved Certifications</h1>
+    </header>
+
+    <section>
+        <h2>General Certificate of Secondary Education</h2>
+        <div class="image-container">
+            <div class="image-item">
+                <p>AQA Exams</p>
+                <img src="../images/certificates/0.25x/AQA.jpg" alt="AQA"
+                    onclick="showLargeImage('../images/certificates/1x/AQA.jpg')">
+            </div>
+            <div class="image-item">
+                <p>Pearson's Edexcel Exams</p>
+                <img src="../images/certificates/0.25x/EDEXEL.jpg" alt="EDEXEL"
+                    onclick="showLargeImage('../images/certificates/1x/EDEXEL.jpg')">
+            </div>
+            <div class="image-item">
+                <p>OCR Exams</p>
+                <img src="../images/certificates/0.25x/OCR.jpg" alt="OCR"
+                    onclick="showLargeImage('../images/certificates/1x/OCR.jpg')">
+            </div>
+            <div class="image-item">
+                <p>WJEC-CBAC Exams</p>
+                <img src="../images/certificates/0.25x/WJEC-CBAC.jpg" alt="WJEC-CBAC"
+                    onclick="showLargeImage('../images/certificates/1x/WJEC-CBAC.jpg')">
+            </div>
+        </div>
+    </section>
+    <section style="size: 80%;">
+        <h2>T-Level (Currently Incomplete)</h2>
+        </div>
+    </section>
+
+    <div class="overlay" id="overlay" onclick="closeLargeImage()"></div>
+
+    <div class="large-image" id="largeImageContainer">
+        <span class="close-btn" onclick="closeLargeImage()">Close &times;</span>
+        <img id="largeImage" src="" alt="Large GCSE Image">
+    </div>
+
+    <script>
+        function showLargeImage(src) {
+            document.getElementById('largeImage').src = src;
+            document.getElementById('largeImageContainer').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeLargeImage() {
+            document.getElementById('largeImageContainer').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,12 +89,33 @@
         .margin {
             margin-left: 3%;
         }
+
+        .button {
+            color: #f0f0f0;
+            max-width: 800px;
+            background-color: #333333;
+            padding: 7px 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            border: 2px solid #4e4e4e;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            padding: 13px
+        }
+        li
+        { margin-left: 2%;}
     </style>
 </head>
+
 <body>
     <header>
         <h1>Zak Dumasia's Resume</h1>
-        <h1 style="font-size: small; color: #969696;">Contact: zakdumasia2007@hotmail.com | Phone: 07389 083225 | Location: South Tyneside</h1>
+        <h1 style="font-size: small; color: #969696;">Contact: zakdumasia2007@hotmail.com | Phone: 07389 083225 |
+            Location: South Tyneside</h1>
     </header>
     <section>
         <h2>Education</h2>
@@ -125,16 +147,40 @@
                 </ul>
             </div>
         </div>
-        <input id="section" type="button" value="Click to view certificates" onclick="location.href = 'certificates/index.html'" style="color: #b3b3b3; max-width: 800px; background-color: #333333; padding: 10px; box-shadow: 0 0 10px rgba(59, 59, 59, 0.1); border-radius: 5px; border-left: 5px solid #222222;">
+        <input id="section" type="button" value="Click to view certificates"
+            onclick="location.href = 'certificates/index.html'" class="button">
+
     </section>
-    
+
     <section>
         <h2>Work Experience</h2>
-        <h3>IT And Network Administrator at UDC-Studios</h3>
+
+        <h3>
+            IT Technician at Queen Elizabeth Hospital
+        </h3>
+        <p>From July 1st 2024 To September 2nd </p>
+        <ul>
+            <li>
+                Over the course of my placement at Queen Elizabeth Hospital, I have fixed more than 100 devices for the
+                trust. Additionally, I now know how companies communicate with their customers, which includes patients
+                and other trust managers. Project and time management is one of the skills I have acquired during my
+                placement. Because the hospital is rather huge and challenging to navigate, I was able to collaborate
+                with my colleagues to identify strategies to locate devices around the trust.
+            </li>
+        </ul>
+        <h3 style="margin-top: 5%;">IT And Network Administrator at UDC-Studios</h3>
+
         <p>October 2021 to Present</p>
         <ul>
-            <div>My job in this organisation was to ensure a secure connected between the server, to the user. The first interaction between UDC-Studios and the client will be through VPN tunnel. I configured the VPN to allow only whitelisted IP addresses into the network. The VPN is using IKEv2 AES-256, as it provides a secure key whilst still being reasonable quick. Each client will be equipped with a domain user via a local Microsoft Active Directory. Having domain users allows each client to authenticate to their own users on all devices connected to the domain. Domain users are also much easier to configure and administrate, because user data is stored on a centralised server.</div>
+            <li>My job in this organisation was to ensure a secure connected between the server, to the user. The first
+                interaction between UDC-Studios and the client will be through VPN tunnel. I configured the VPN to allow
+                only whitelisted IP addresses into the network. The VPN is using IKEv2 AES-256, as it provides a secure
+                key whilst still being reasonable quick. Each client will be equipped with a domain user via a local
+                Microsoft Active Directory. Having domain users allows each client to authenticate to their own users on
+                all devices connected to the domain. Domain users are also much easier to configure and administrate,
+                because user data is stored on a centralised server.</li>
         </ul>
+
     </section>
 
     <section>
@@ -175,9 +221,11 @@
         </ul>
     </section>
 
-    <div id="popup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #333; color: #fff; padding: 60px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); z-index: 1000;">
+    <div id="popup"
+        style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #333; color: #fff; padding: 60px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); z-index: 1000;">
         <div id="popup-content"></div>
-        <button onclick="document.getElementById('popup').style.display='none'" style="margin-top: 10px; background-color: #555; color: #fff; border: none; padding: 5px 10px; cursor: pointer; margin-left: 40%;">Close</button>
+        <button onclick="document.getElementById('popup').style.display='none'"
+            style="margin-top: 10px; background-color: #555; color: #fff; border: none; padding: 5px 10px; cursor: pointer; margin-left: 40%;">Close</button>
     </div>
 
     <script>
@@ -193,7 +241,7 @@
             popup.style.display = 'block';
         }
 
-        window.onload = function() {
+        window.onload = function () {
             const studentParam = getQueryParam('student');
             if (studentParam !== null) {
                 showPopup('Hmm, it seems you found my ID card!');
@@ -201,4 +249,5 @@
         }
     </script>
 </body>
+
 </html>

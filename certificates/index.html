@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GCSE Images</title>
-    
+
     <style>
         body {
             font-family: Helvetica, Arial, sans-serif;
@@ -59,12 +59,6 @@
             max-width: 300px;
             margin: 10px;
         }
-        .image-item-NA {
-            flex: 1;
-            min-width: 25px;
-            max-width: 30px;
-            margin: 10px;
-        }
 
         .image-item img {
             width: 100%;
@@ -109,45 +103,123 @@
         .close-btn:hover {
             color: #8d8d8d;
         }
+
+        .button {
+            transition: width 0.3s ease, max-width 0.3s ease, background-color 0.3s ease;
+            color: #f0f0f0;
+            width: 200px;
+            max-width: 400px;
+            background-color: #333333;
+            padding: 12px 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            border: 2px solid #4e4e4e;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .button:hover {
+            width: 250px;
+            max-width: 800px;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .search-button {
+            background-color: #333333;
+            border: none;
+            color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s, padding 0.3s;
+        }
+
+        .search-button img {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+        }
+
+        .search-button span {
+            margin-left: 5px;
+        }
+
+        .search-button:hover {
+            transform: scale(1.05);
+            padding: 5px 15px;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>Achieved Certifications</h1>
-        <input id="section" type="button" value="Click to return home" onclick="location.href = '../index.html' "
-        style="color: #b3b3b3; max-width: 800px; background-color: #4e4e4e; padding: 10px; box-shadow: 0 0 10px rgba(59, 59, 59, 0.1); border-radius: 5px; border-left: 5px solid #3b3b3b;" />
-</input>
+        <input id="section" type="button" value="Click to return home" onclick="location.href = '../index.html'"
+            class="button" />
     </header>
 
     <section>
         <h2>General Certificate of Secondary Education</h2>
         <div class="image-container">
             <div class="image-item">
-                <p>AQA Exams</p>
+                <div class="search-container">
+                    <p>AQA Exams</p>
+                    <button class="search-button" onclick="location.href = 'https://aqa.org.uk'">
+                        <img src="../images/search-icon.svg" alt="View Official Site">
+                        <span>Visit Official Site</span>
+                    </button>
+                </div>
                 <img src="../images/certificates/0.25x/AQA.jpg" alt="AQA"
                     onclick="showLargeImage('../images/certificates/1x/AQA.jpg')">
             </div>
             <div class="image-item">
-                <p>Pearson's Edexcel Exams</p>
+                <div class="search-container">
+                    <p>Edexcel Exams</p>
+                    <button class="search-button" onclick="location.href = 'https://qualifications.pearson.com'">
+                        <img src="../images/search-icon.svg" alt="View Official Site">
+                        <span>Visit Official Site</span>
+                    </button>
+                </div>
                 <img src="../images/certificates/0.25x/EDEXEL.jpg" alt="EDEXEL"
                     onclick="showLargeImage('../images/certificates/1x/EDEXEL.jpg')">
             </div>
             <div class="image-item">
-                <p>OCR Exams</p>
+                <div class="search-container">
+                    <p>OCR Exams</p>
+                    <button class="search-button" onclick="location.href = 'https://ocr.org.uk'">
+                        <img src="../images/search-icon.svg" alt="View Official Site">
+                        <span>Visit Official Site</span>
+                    </button>
+                </div>
                 <img src="../images/certificates/0.25x/OCR.jpg" alt="OCR"
                     onclick="showLargeImage('../images/certificates/1x/OCR.jpg')">
             </div>
             <div class="image-item">
-                <p>WJEC-CBAC Exams</p>
+                <div class="search-container">
+                    <p>Eduqas Exams</p>
+                    <button class="search-button" onclick="location.href = 'https://wjec.co.uk'">
+                        <img src="../images/search-icon.svg" alt="View Official Site">
+                        <span>Visit Official Site</span>
+                    </button>
+                </div>
                 <img src="../images/certificates/0.25x/WJEC-CBAC.jpg" alt="WJEC-CBAC"
                     onclick="showLargeImage('../images/certificates/1x/WJEC-CBAC.jpg')">
             </div>
         </div>
     </section>
     <section style="size: 80%;">
-        <h2>T-Level (Currently Incomplete)</h2>
-        </div>
+        <h2>T-Level (Course Incomplete)</h2>
     </section>
 
     <div class="overlay" id="overlay" onclick="closeLargeImage()"></div>

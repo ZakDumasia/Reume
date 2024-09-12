@@ -10,12 +10,12 @@
             background-color: #000000;
             margin: 0;
             padding: 0;
+            background-size: cover;
+            background-size: 85%;
             background-image: url(./images/background.webp);
-            background-size: contain;
             background-position: center;
             display: block;
             color: #bfbfbf;
-            /* Text color */
         }
 
         .education-container {
@@ -43,7 +43,7 @@
         section {
             max-width: 800px;
             margin: 20px auto;
-            background-color: #1b1b1b;
+            background-color: #1b1b1bdc;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
@@ -105,8 +105,68 @@
         .button:hover {
             padding: 13px
         }
-        li
-        { margin-left: 2%;}
+
+        li {
+            margin-left: 2%;
+        }
+
+        /* Edit: Made it so mobile viewers can view it without going all over the place */
+        @media (max-width: 768px) {
+            body {
+                background-size: cover;
+                padding: 10px;
+            }
+
+            header {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            p, ul, li {
+                font-size: 16px;
+            }
+
+            section {
+                max-width: 100%;
+                padding: 15px;
+                margin-bottom: 40px;
+            }
+
+            .education-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .education-item {
+                min-width: 100%;
+                padding: 10px;
+            }
+
+            .button {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            #popup {
+                width: 80%;
+                padding: 30px;
+            }
+
+            footer {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 
@@ -116,6 +176,7 @@
         <h1 style="font-size: small; color: #969696;">Contact: zakdumasia2007@hotmail.com | Phone: 07389 083225 |
             Location: South Tyneside</h1>
     </header>
+
     <section>
         <h2>Education</h2>
         <div class="education-container">
@@ -148,15 +209,11 @@
         </div>
         <input id="section" type="button" value="Click to view certificates"
             onclick="location.href = 'certificates/index.html'" class="button">
-
     </section>
 
     <section>
         <h2>Work Experience</h2>
-
-        <h3>
-            IT Technician at Queen Elizabeth Hospital
-        </h3>
+        <h3>IT Technician at Queen Elizabeth Hospital</h3>
         <p>From July 1st 2024 To September 2nd </p>
         <ul>
             <li>
@@ -166,9 +223,7 @@
                 placement. Because the hospital is quite large and challenging to navigate, I was able to collaborate
                 with my colleagues to identify strategies to locate devices around the trust.
             </li>
-        
         </ul>
-
     </section>
 
     <section>
@@ -229,5 +284,4 @@
         }
     </script>
 </body>
-
 </html>

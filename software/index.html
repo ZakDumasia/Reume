@@ -1,4 +1,5 @@
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GUI File Server</title>
@@ -10,7 +11,7 @@
             margin: 0;
             padding: 0;
             background-image: url(../images/background.webp);
-            background-size: contain;
+            background-size: cover;
             background-position: center;
             display: block;
         }
@@ -18,35 +19,37 @@
             background-color: #333;
             text-align: center;
             padding: 20px;
-            background-size: contain;
-            background-position: center;
-            display: block;
             color: #fff;
+            font-size: 32px;
+            text-transform: uppercase;
         }
         .dashboard {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
-            padding: 20px;
+            padding: 40px;
             max-width: 1200px;
             margin: auto;
         }
         .container {
             background-color: #252525;
             padding: 30px;
-            border-radius: 5px;
-            border-left: 5px solid rgb(59, 59, 59);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background-color 0.3s ease;
             text-align: center;
             color: #bfbfbf;
+            background-image: url(../images/container-bg.jpg);
+            background-size: cover;
+            background-blend-mode: multiply;
         }
         .container:hover {
-            transform: translateY(-5px);
+            transform: scale(1.05);
+            background-color: #1f1f1f;
         }
         h2 {
             margin-top: 0;
-            font-size: 20px;
+            font-size: 22px;
             color: #fff;
             border-bottom: 2px solid #505050;
             padding-bottom: 10px;
@@ -54,7 +57,7 @@
         }
         p {
             line-height: 1.6;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             color: #bfbfbf;
         }
         .download-button {
@@ -71,19 +74,21 @@
         }
         .download-button:hover {
             background-color: #505050;
-            transform: scale(1.05);
+            transform: scale(1.10);
+        }
+        .icon {
+            max-width: fit-content;
+            height: 50px;
+            margin-bottom: 20px;
         }
         footer {
             background-color: #333;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             position: fixed;
             bottom: 0;
             width: 100%;
             color: #fff;
-            background-size: contain;
-            background-position: center;
-            display: block;
         }
     </style>
 </head>
@@ -94,39 +99,34 @@
     </header>
 
     <div class="dashboard">
-
         <div class="container">
+            <img src="../images/icons/cisco.webp" alt="Packet Tracer Icon" class="icon">
             <h2>Download Packet Tracer</h2>
             <p>Click the button below to download the binaries.</p>
             <a href="https://drive.google.com/file/d/1tcO7iyaKvrbuqSSw5CJhIDw_5Mgcoz19/view?usp=drive_link" class="download-button">Download Now</a>
         </div>
 
         <div class="container">
-            <h2>Download GUI Version 2.0</h2>
-            <p>Click the button below to download the binaries.</p>
-            <a href="path_to_gui_version_2" class="download-button">Download Now</a>
+            <img src="../images/icons/minecraft.webp" alt="Minecraft Icon" class="icon">
+            <h2>Minecraft (EaglerCraft)</h2>
+            <p>Click the button below to directly load the page.</p>
+            <a href="java/index.html" class="download-button">Play Now!</a>
         </div>
 
         <div class="container">
+            <img src="../images/gui-v3-icon.png" alt="GUI v3 Icon" class="icon">
             <h2>Download GUI Version 3.0</h2>
             <p>Click the button below to download the binaries.</p>
             <a href="path_to_gui_version_3" class="download-button">Download Now</a>
         </div>
 
-    <div class="container">
-            <h2>Download GUI Version 3.0</h2>
-            <p>Click the button below to download the binaries.</p>
-            <a href="path_to_gui_version_3" class="download-button">Download Now</a>
-        </div><div class="container">
-            <h2>Download GUI Version 3.0</h2>
-            <p>Click the button below to download the binaries.</p>
-            <a href="path_to_gui_version_3" class="download-button">Download Now</a>
-        </div><div class="container">
-            <h2>Download GUI Version 3.0</h2>
-            <p>Click the button below to download the binaries.</p>
-            <a href="path_to_gui_version_3" class="download-button">Download Now</a>
-        </div></div>
+        <!-- Add additional containers as needed -->
+        
+    </div>
 
+    <footer>
+        &copy; 2024 GUI File Server. All Rights Reserved.
+    </footer>
 
-
-</body></html>
+</body>
+</html>

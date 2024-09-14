@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
             margin: 0;
             padding: 0;
             background-size: cover;
-            background-size: 85%;
+            background-size: 90%;
             background-image: url(./images/background.webp);
             background-position: center;
             display: block;
@@ -114,6 +115,7 @@
         @media (max-width: 768px) {
             body {
                 background-size: cover;
+                background-size: 100%;
                 padding: 10px;
             }
 
@@ -133,7 +135,7 @@
                 font-size: 18px;
             }
 
-            p, ul, li {
+            li {
                 font-size: 16px;
             }
 
@@ -166,6 +168,7 @@
             footer {
                 padding: 15px;
             }
+
         }
     </style>
 </head>
@@ -217,13 +220,25 @@
         <p>From July 1st 2024 To September 2nd </p>
         <ul>
             <li>
-                Over the course of my placement at Queen Elizabeth Hospital, I have fixed more than 100 devices for the
-                trust. Additionally, I now know how companies communicate with their customers, which includes patients
-                and other trust managers. Project and time management is one of the skills I have acquired during my
-                placement. Because the hospital is quite large and challenging to navigate, I was able to collaborate
-                with my colleagues to identify strategies to locate devices around the trust.
+                Over the length of my placement at Queen Elizabeth Hospital, I have located and repaired over 150
+                devices for the trust. Furthermore, I now understand how businesses should communicate with their
+                clients face to face. While I mostly talked with ward managers, I did have the opportunity to interact
+                with nurses and other hospital staff.
             </li>
         </ul>
+        <div id="moreText" style="display:none;">
+            <ul>
+                <li>
+                    Because of the large volume of work that needed to be completed, project time management was one of
+                    the most important skills I developed during my placement.
+                    The Q.E hospital is fairly huge, therefore travelling across it can be time-consuming and difficult
+                    to navigate. However, I was able to engage with my colleagues to develop the most efficient
+                    techniques to repair and distribute devices around the trust.
+                </li>
+            </ul>
+        </div>
+        <button id="moreBtn" style="margin-left: 2%; color: #f0f0f0; background: none; border: none; padding: 0; font-size: 12px; cursor: pointer;">Show More</button>
+
     </section>
 
     <section>
@@ -264,6 +279,16 @@
     </div>
 
     <script>
+        document.getElementById("moreBtn").addEventListener("click", function () {
+            var moreText = document.getElementById("moreText");
+            if (moreText.style.display === "none") {
+                moreText.style.display = "block";
+                this.textContent = "Show Less";
+            } else {
+                moreText.style.display = "none";
+                this.textContent = "Show More";
+            }
+        });
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
@@ -284,4 +309,5 @@
         }
     </script>
 </body>
+
 </html>

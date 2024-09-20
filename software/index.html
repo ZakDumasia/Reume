@@ -1,5 +1,4 @@
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download Hub</title>
@@ -22,11 +21,23 @@
             color: #fff;
             font-size: 28px;
         }
+        section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 30px;
+            text-align: center;
+            color: #fff;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #505050;
+            padding-bottom: 10px;
+        }
         .dashboard {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
-            padding: 40px;
+            padding: 0 40px;
             max-width: 1200px;
             margin: auto;
         }
@@ -73,14 +84,12 @@
         .download-button:hover {
             background-color: #505050;
             transform: scale(1.10);
-            
         }
         .icon {
             max-width: fit-content;
             height: 50px;
             margin-bottom: 20px;
             transition: background-color 0.3s ease, transform 0.3s ease;
-            
         }
         .icon:hover {
             max-width: fit-content;
@@ -105,100 +114,121 @@
         Direct Downloads
     </header>
 
-    <div class="dashboard">
+    <!-- Windows Section -->
+    <section>
+        <h1 class="section-title">Microsoft</h1>
+        <div class="dashboard">
+            <div class="container">
+                <img src="../images/icons/microsoft.svg" alt="Icon" class="icon">
+                <h2>Windows Server 2025</h2>
+                <p>Click the button below to download the ISO</p>
+                <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EUJGNFHkCDVPuvSpNMrbjiMB2fgk5Lv8C8XeAZedrnsJ0A?e=u3Ioxc" class="download-button">Download Now</a>
+            </div>
+    
+                
 
-        <div class="container">
-            <img src="../images/icons/cisco.svg" alt="Packet Tracer Icon" class="icon">
-            <h2>Download Packet Tracer</h2>
-            <p>Click the button below to download the binaries.</p>
-            <a href="https://drive.usercontent.google.com/download?id=1tcO7iyaKvrbuqSSw5CJhIDw_5Mgcoz19&export=download" class="download-button">Download Now</a>
-        </div>
-
-        <div class="container">
-            <img src="../images/icons/gns3.webp" alt="Icon" class="icon"  >
-            <h2>GNS3</h2>
-            <p>Click the button below to download the binaries.</p>
-            <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EXzvRBEcOSZMpMXWOjWzbmwBzgQiZ8-5NNCxgugC1g2akg?e=rqmZNO" class="download-button">Download Now</a>
-        </div>
-
-        <div class="container">
-            <img src="../images/icons/minecraft.webp" alt="Icon" class="icon">
-            <h2>Minecraft (EaglerCraft)</h2>
-            <p>Click the button below to directly load the page.</p>
-            <a href="../binaries/java" class="download-button">Play Now!</a>
-        </div>
-
-        <div class="container">
-            <img src="../images/icons/lunar.webp" alt="Icon" class="icon" >
-            <h2>Lunar Client 3.2.9</h2>
-            <p>Click the button below to download the binaries.</p>
-            <a href="../binaries/lunar/lunarclient.exe" class="download-button">Download Now</a>
-        </div>
-        <div class="container">
-            <img src="../images/icons/mouse.webp" alt="Icon" class="icon" >
-            <h2>Autoclicker 3.0</h2>
-            <p>Click the button below to download the binaries.</p>
-            <a href="../binaries/mouse-keyboard/AutoClicker.exe" class="download-button">Download Now</a>
-        </div>
-        
-        <div class="container">
-            <img src="../images/icons/skyrim.webp" alt="Icon" class="icon"  >
-            <h2>Skyrim Legendary Edition</h2>
-            <p>Click the button below to download the binaries.</p>
-            <a href="https://livetestnclcollac-my.sharepoint.com/:f:/g/personal/s2229215_students_ncl-coll_ac_uk/Ehctnwp0FmdLoxj5HVqY-6QBXQL2-E14n2ZByjnc2C5wwQ?e=WgVCLt" class="download-button">Download Now</a>
-        </div>
-
-        <div class="container">
-            <img src="../images/icons/kali.webp" alt="Icon" class="icon"  >
-            <h2>Kali Linux</h2>
-            <p>Click the button below to download the ISO.</p>
-            <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EclGmo9rEM9Jm4e-INUQVhQBzLUaDB1lAAcZ0B5rkgC2bQ?e=djoRWk" class="download-button">Download Now</a>
-        </div>
-
-        <div class="container">
-            <img src="../images/icons/kali.webp" alt="Icon" class="icon"  >
-            <h2>Kali Linux (Pre-Installed)</h2>
-            <p>Click the button below to download the disk.</p>
-            <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/ERqfoykm8WVNpbS8wsb4-PkB1QcLdG3rBj_1gGwUvPS4ew?e=U9BJ98" class="download-button">Download Now</a>
-        </div>
-
-        <div class="container">
-            <img src="../images/icons/ubuntu.svg" alt="Icon" class="icon"  >
-            <h2>Ubuntu Desktop</h2>
-            <p>Click the button below to download the ISO Installer.</p>
-            <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/ESME8LP9kZJMnGkPXxCEVkMB2qyhTclENKZgl6OEGQpA4Q?e=1r19Qz" class="download-button">Download Now</a>
-        </div>
-
-        <div class="container">
-            <img src="../images/icons/linuxmint.svg" alt="Icon" class="icon"  >
-            <h2>Linux Mint: Cinnamon</h2>
-            <p>Click the button below to download the ISO</p>
-            <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EYp5cswynfdFsfYaWNB6NsoBSS2rm3paegXEYKAvJUw4Nw?e=Sr7iRg" class="download-button">Download Now</a>
-        </div>
-        <div class="container">
-            <img src="../images/icons/microsoft.svg" alt="Icon" class="icon"  >
-            <h2>Microsoft: Windows Server 2025</h2>
+                <div class="container">
+            <img src="../images/icons/windows11.webp" alt="Icon" class="icon">
+            <h2>Windows 11</h2>
             <p>Click the button below to download the ISO</p>
             <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EUJGNFHkCDVPuvSpNMrbjiMB2fgk5Lv8C8XeAZedrnsJ0A?e=u3Ioxc" class="download-button">Download Now</a>
         </div>
-
-                <div class="container">
-            <img src="../images/icons/windows10.webp" alt="Icon" class="icon"  >
-            <h2>Microsoft: Windows 10</h2>
+        <div class="container">
+            <img src="../images/icons/windows10.webp" alt="Icon" class="icon">
+            <h2>Windows 10</h2>
             <p>Click the button below to download the ISO</p>
             <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EZcY9-qTquhEjTFtJDwh4XMByWBZG9SXLHmbdkg_CybMHg?e=Yt0ddu" class="download-button">Download Now</a>
+        </div></div>
+    </section>
+
+    <!-- Linux Section -->
+    <section>
+        <h1 class="section-title">Linux</h1>
+        <div class="dashboard">
+            <div class="container">
+                <img src="../images/icons/kali.webp" alt="Icon" class="icon">
+                <h2>Kali 2024.3</h2>
+                <p>Click the button below to download the ISO.</p>
+                <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EclGmo9rEM9Jm4e-INUQVhQBzLUaDB1lAAcZ0B5rkgC2bQ?e=djoRWk" class="download-button">Download Now</a>
+            </div>
+
+            <div class="container">
+                <img src="../images/icons/kali.webp" alt="Icon" class="icon">
+                <h2>Kali Kali 2024.3 (Pre-Installed)</h2>
+                <p>Click the button below to download the disk.</p>
+                <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/ERqfoykm8WVNpbS8wsb4-PkB1QcLdG3rBj_1gGwUvPS4ew?e=U9BJ98" class="download-button">Download Now</a>
+            </div>
+
+            <div class="container">
+                <img src="../images/icons/ubuntu.svg" alt="Icon" class="icon">
+                <h2>Ubuntu Desktop</h2>
+                <p>Click the button below to download the ISO Installer.</p>
+                <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/ESME8LP9kZJMnGkPXxCEVkMB2qyhTclENKZgl6OEGQpA4Q?e=1r19Qz" class="download-button">Download Now</a>
+            </div>
+
+            <div class="container">
+                <img src="../images/icons/linuxmint.svg" alt="Icon" class="icon">
+                <h2>Mint: Cinnamon</h2>
+                <p>Click the button below to download the ISO</p>
+                <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EYp5cswynfdFsfYaWNB6NsoBSS2rm3paegXEYKAvJUw4Nw?e=Sr7iRg" class="download-button">Download Now</a>
+            </div>
         </div>
+    </section>
 
-                <div class="container">
-            <img src="../images/icons/windows11.webp" alt="Icon" class="icon"  >
-            <h2>Microsoft: Windows 11</h2>
-            <p>Click the button below to download the ISO</p>
-            <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EUJGNFHkCDVPuvSpNMrbjiMB2fgk5Lv8C8XeAZedrnsJ0A?e=u3Ioxc" class="download-button">Download Now</a>
+    <!-- Tools Section -->
+    <section>
+        <h1 class="section-title">Tools</h1>
+        <div class="dashboard">
+            <div class="container">
+                <img src="../images/icons/cisco.svg" alt="Packet Tracer Icon" class="icon">
+                <h2>Download Packet Tracer</h2>
+                <p>Click the button below to download the binaries.</p>
+                <a href="https://drive.usercontent.google.com/download?id=1tcO7iyaKvrbuqSSw5CJhIDw_5Mgcoz19&amp;export=download" class="download-button">Download Now</a>
+            </div>
+
+            <div class="container">
+                <img src="../images/icons/gns3.webp" alt="Icon" class="icon">
+                <h2>GNS3</h2>
+                <p>Click the button below to download the binaries.</p>
+                <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EXzvRBEcOSZMpMXWOjWzbmwBzgQiZ8-5NNCxgugC1g2akg?e=rqmZNO" class="download-button">Download Now</a>
+            </div>
+
+            <div class="container">
+                <img src="../images/icons/mouse.webp" alt="Icon" class="icon">
+                <h2>Autoclicker 3.0</h2>
+                <p>Click the button below to download the binaries.</p>
+                <a href="../binaries/mouse-keyboard/AutoClicker.exe" class="download-button">Download Now</a>
+            </div>
         </div>
+    </section>
 
-        
-    </div>
+    <!-- Gaming Section -->
+    <section>
+        <h1 class="section-title">Gaming</h1>
+        <div class="dashboard">
+            <div class="container">
+                <img src="../images/icons/minecraft.webp" alt="Icon" class="icon">
+                <h2>Minecraft (EaglerCraft)</h2>
+                <p>Click the button below to directly load the page.</p>
+                <a href="../binaries/java" class="download-button">Play Now!</a>
+            </div>
+
+            <div class="container">
+                <img src="../images/icons/lunar.webp" alt="Icon" class="icon">
+                <h2>Lunar Client 3.2.9</h2>
+                <p>Click the button below to download the binaries.</p>
+                <a href="../binaries/lunar/lunarclient.exe" class="download-button">Download Now</a>
+            </div>
+
+            <div class="container">
+                <img src="../images/icons/skyrim.webp" alt="Icon" class="icon">
+                <h2>Skyrim Legendary Edition</h2>
+                <p>Click the button below to download the binaries.</p>
+                <a href="https://livetestnclcollac-my.sharepoint.com/:f:/g/personal/s2229215_students_ncl-coll_ac_uk/Ehctnwp0FmdLoxj5HVqY-6QBXQL2-E14n2ZByjnc2C5wwQ?e=WgVCLt" class="download-button">Download Now</a>
+            </div>
+        </div>
+    </section>
 
 
-</body>
-</html>
+
+</body></html>

@@ -273,7 +273,7 @@
 
     <div id="popup"
         style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #333; color: #fff; padding: 60px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); z-index: 1000;">
-        <div id="popup-content">Student ID: 12345</div>
+        <div id="popup-content"></div>
         <button onclick="document.getElementById('popup').style.display='none'"
             style="margin-top: 10px; background-color: #555; color: #fff; border: none; padding: 5px 10px; cursor: pointer; margin-left: 40%;">Close</button>
     </div>
@@ -289,7 +289,6 @@
                 this.textContent = "Show More";
             }
         });
-
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
@@ -305,16 +304,7 @@
         window.onload = function () {
             const studentParam = getQueryParam('student');
             if (studentParam !== null) {
-                fetch('https://api.ipify.org?format=json')
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.ip === '212.219.49.2') {
-                            showPopup('Hmm, it seems you found my ID card!');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error fetching IP address:', error);
-                    });
+                showPopup('Hmm, it seems you found my ID card!');
             }
         }
     </script>

@@ -1,4 +1,6 @@
-<html lang="en"><head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download Hub</title>
@@ -15,6 +17,7 @@
             background-position: center;
             display: block;
         }
+
         header {
             background-color: #333;
             text-align: center;
@@ -22,9 +25,13 @@
             color: #fff;
             font-size: 28px;
         }
+
         section {
             margin-bottom: 40px;
+            -webkit-user-drag: none;
+            
         }
+
         .section-title {
             font-size: 30px;
             text-align: center;
@@ -34,6 +41,7 @@
             border-bottom: 2px solid #505050;
             padding-bottom: 10px;
         }
+
         .dashboard {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -42,6 +50,7 @@
             max-width: 1200px;
             margin: auto;
         }
+
         .container {
             background-color: #252525;
             padding: 30px;
@@ -52,11 +61,15 @@
             color: #bfbfbf;
             background-size: cover;
             background-blend-mode: multiply;
+            border: 3px solid #292929;
+            /* Thin greyish outline */
         }
+
         .container:hover {
             transform: scale(1.05);
             background-color: #1f1f1f;
         }
+
         h2 {
             margin-top: 0;
             font-size: 22px;
@@ -65,11 +78,13 @@
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
+
         p {
             line-height: 1.6;
             margin-bottom: 20px;
             color: #bfbfbf;
         }
+
         .download-button {
             display: inline-block;
             padding: 15px 30px;
@@ -82,22 +97,26 @@
             text-decoration: none;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         .download-button:hover {
             background-color: #505050;
             transform: scale(1.10);
         }
+
         .icon {
             max-width: fit-content;
             height: 50px;
             margin-bottom: 20px;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         .icon:hover {
             max-width: fit-content;
             height: 50px;
             margin-bottom: 20px;
             transform: scale(1.10);
         }
+
         footer {
             background-color: #333;
             text-align: center;
@@ -107,8 +126,12 @@
             width: 100%;
             color: #fff;
         }
+        img {
+            
+        }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -122,59 +145,67 @@
             <div class="container">
                 <img src="../images/icons/microsoft.svg" alt="Icon" class="icon">
                 <h2>Windows Server 2025</h2>
-                <p>Click the button below to download the ISO</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/winserver2025.iso" class="download-button">Download Now</a>
+                <p>Click the button below to download the ISO.</p>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/winserver2025.iso"
+                    class="download-button">Download Now</a>
             </div>
             <div class="container">
                 <img src="../images/icons/microsoft.svg" alt="Icon" class="icon">
-                <h2>Windows Server 2025 - Prebuilt</h2>
-                <p>Click the button below to download the ISO</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/winserver2025built.7z" class="download-button">Download Now</a>
+                <h2>Windows Server 2025 - Disk</h2>
+                <p>Click the button below to download the disk.</p>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/winserver2025built.7z"
+                    class="download-button">Download Now</a>
             </div>
-            
+
             <div class="container">
                 <img src="../images/icons/microsoft.svg" alt="Icon" class="icon">
                 <h2>Windows Server 2022</h2>
-                <p>Click the button below to download the ISO</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/winserver2022.iso" class="download-button">Download Now</a>
+                <p>Click the button below to download the ISO.</p>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/winserver2022.iso"
+                    class="download-button">Download Now</a>
             </div>
 
             <div class="container">
                 <img src="../images/icons/microsoft.svg" alt="Icon" class="icon">
-                <h2>Windows Server 2022 (Prebuilt)</h2>
-                <p>Click the button below to download the ISO</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/winserver2022built.zip" class="download-button">Download Now</a>
+                <h2>Windows Server 2022 - Disk</h2>
+                <p>Click the button below to download the disk.</p>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/winserver2022built.zip"
+                    class="download-button">Download Now</a>
             </div>
 
-             <div class="container">
+            <div class="container">
                 <img src="../images/icons/microsoft.svg" alt="Icon" class="icon">
                 <h2>Windows Server 2019</h2>
-                <p>Click the button below to download the ISO</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/winserver2019.iso" class="download-button">Download Now</a>
+                <p>Click the button below to download the ISO.</p>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/winserver2019.iso"
+                    class="download-button">Download Now</a>
             </div>
 
             <div class="container">
                 <img src="../images/icons/exchange.svg" alt="Icon" class="icon">
                 <h2>Exchange Server 2019</h2>
-                <p>Click the button below to download the ISO</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/exchange2019.iso" class="download-button">Download Now</a>
+                <p>Click the button below to download the ISO.</p>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/exchange2019.iso"
+                    class="download-button">Download Now</a>
             </div>
-                
+
 
             <div class="container">
-            <img src="../images/icons/windows11.webp" alt="Icon" class="icon">
-            <h2>Windows 11</h2>
-            <p>Click the button below to download the ISO</p>
-            <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/windows11.iso" class="download-button">Download Now</a>
+                <img src="../images/icons/windows11.webp" alt="Icon" class="icon">
+                <h2>Windows 11</h2>
+                <p>Click the button below to download the ISO.</p>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/windows11.iso"
+                    class="download-button">Download Now</a>
+            </div>
+            <div class="container">
+                <img src="../images/icons/windows10.webp" alt="Icon" class="icon">
+                <h2>Windows 10</h2>
+                <p>Click the button below to download the ISO.</p>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/windows10.iso"
+                    class="download-button">Download Now</a>
+            </div>
+
         </div>
-        <div class="container">
-            <img src="../images/icons/windows10.webp" alt="Icon" class="icon">
-            <h2>Windows 10</h2>
-            <p>Click the button below to download the ISO</p>
-            <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/windows10.iso" class="download-button">Download Now</a>
-        </div>
-    
-    </div>
     </section>
 
     <!-- Linux Section -->
@@ -182,61 +213,70 @@
         <h1 class="section-title">Linux</h1>
         <div class="dashboard">
             <div class="container">
-                <img src="../images/icons/kali.webp" alt="Icon" class="icon">
+                <img src="../images/icons/kali.webp" alt="Icon" class="icon" >
                 <h2>Kali 2024.3</h2>
                 <p>Click the button below to download the ISO.</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/kali.iso" class="download-button">Download Now</a>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/kali.iso"
+                    class="download-button">Download Now</a>
             </div>
 
             <div class="container">
                 <img src="../images/icons/kali.webp" alt="Icon" class="icon">
-                <h2>Kali Kali 2024.3 (Pre-Built)</h2>
+                <h2>Kali Kali 2024.3 - Disk</h2>
                 <p>Click the button below to download the disk.</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/kalibuilt.7z" class="download-button">Download Now</a>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/kalibuilt.7z"
+                    class="download-button">Download Now</a>
             </div>
             <div class="container">
                 <img src="../images/icons/manjaro.svg" alt="Icon" class="icon">
                 <h2>Manjaro KDE</h2>
                 <p>Click the button below to download the ISO.</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/manjaro-KDE.iso" class="download-button">Download Now</a>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/manjaro-KDE.iso"
+                    class="download-button">Download Now</a>
             </div>
 
             <div class="container">
                 <img src="../images/icons/ubuntu.svg" alt="Icon" class="icon">
                 <h2>Ubuntu Desktop</h2>
                 <p>Click the button below to download the ISO.</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/ubuntuserver.iso" class="download-button">Download Now</a>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/ubuntuserver.iso"
+                    class="download-button">Download Now</a>
             </div>
             <div class="container">
                 <img src="../images/icons/ubuntu.svg" alt="Icon" class="icon">
                 <h2>Ubuntu Server</h2>
                 <p>Click the button below to download the ISO.</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/ubuntuserver.iso" class="download-button">Download Now</a>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/ubuntuserver.iso"
+                    class="download-button">Download Now</a>
             </div>
 
             <div class="container">
                 <img src="../images/icons/linuxmint.svg" alt="Icon" class="icon">
                 <h2>Mint: Cinnamon</h2>
                 <p>Click the button below to download the ISO</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/linuxmint.iso" class="download-button">Download Now</a>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/linuxmint.iso"
+                    class="download-button">Download Now</a>
             </div>
             <div class="container">
                 <img src="../images/icons/opensuse.svg" alt="Icon" class="icon">
                 <h2>OpenSUSE</h2>
                 <p>Click the button below to download the ISO</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/opensuse.iso" class="download-button">Download Now</a>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/opensuse.iso"
+                    class="download-button">Download Now</a>
             </div>
             <div class="container">
                 <img src="../images/icons/redhat.svg" alt="Icon" class="icon">
                 <h2>Red Hat</h2>
                 <p>Click the button below to download the ISO</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/redhat.iso" class="download-button">Download Now</a>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/redhat.iso"
+                    class="download-button">Download Now</a>
             </div>
             <div class="container">
                 <img src="../images/icons/debian.webp" alt="Icon" class="icon">
                 <h2>Debian: KDE</h2>
                 <p>Click the button below to download the ISO</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/debianKDE.iso" class="download-button">Download Now</a>
+                <a href="https://livetestnclcollac-my.sharepoint.com/personal/s2229215_students_ncl-coll_ac_uk/Documents/operatingsystems/debianKDE.iso"
+                    class="download-button">Download Now</a>
             </div>
         </div>
     </section>
@@ -249,14 +289,16 @@
                 <img src="../images/icons/cisco.svg" alt="Packet Tracer Icon" class="icon">
                 <h2>Download Packet Tracer</h2>
                 <p>Click the button below to download the binaries.</p>
-                <a href="https://drive.usercontent.google.com/download?id=1tcO7iyaKvrbuqSSw5CJhIDw_5Mgcoz19&amp;export=download" class="download-button">Download Now</a>
+                <a href="https://drive.usercontent.google.com/download?id=1tcO7iyaKvrbuqSSw5CJhIDw_5Mgcoz19&amp;export=download"
+                    class="download-button">Download Now</a>
             </div>
 
             <div class="container">
                 <img src="../images/icons/gns3.webp" alt="Icon" class="icon">
                 <h2>GNS3</h2>
                 <p>Click the button below to download the binaries.</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EXzvRBEcOSZMpMXWOjWzbmwBzgQiZ8-5NNCxgugC1g2akg?e=rqmZNO" class="download-button">Download Now</a>
+                <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EXzvRBEcOSZMpMXWOjWzbmwBzgQiZ8-5NNCxgugC1g2akg?e=rqmZNO"
+                    class="download-button">Download Now</a>
             </div>
 
             <div class="container">
@@ -269,27 +311,30 @@
                 <img src="../images/icons/wireshark.webp" alt="Icon" class="icon">
                 <h2>Wireshark</h2>
                 <p>Click the button below to download the binaries.</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EZnjZ8j4v6hFtDnBGQR3rgwBBRJeJsmtzD4x7VHV37sCsA?e=ma6afQ" class="download-button">Download Now</a>
+                <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EZnjZ8j4v6hFtDnBGQR3rgwBBRJeJsmtzD4x7VHV37sCsA?e=ma6afQ"
+                    class="download-button">Download Now</a>
             </div>
             <div class="container">
                 <img src="../images/icons/github-desktop.webp" alt="Icon" class="icon">
                 <h2>Github Desktop</h2>
                 <p>Click the button below to download the binaries.</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EVsWt0UGecBGprUr9sxD72wBtRjNy80PEP3MW5knAv_siA?e=Q7BRL6" class="download-button">Download Now</a>
+                <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EVsWt0UGecBGprUr9sxD72wBtRjNy80PEP3MW5knAv_siA?e=Q7BRL6"
+                    class="download-button">Download Now</a>
             </div>
             <div class="container">
                 <img src="../images/icons/visualcode.svg" alt="Icon" class="icon">
                 <h2>Visual Studio Code</h2>
                 <p>Click the button below to download the binaries.</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EVsWt0UGecBGprUr9sxD72wBtRjNy80PEP3MW5knAv_siA?e=Q7BRL6" class="download-button">Download Now</a>
-                
+                <a href="https://livetestnclcollac-my.sharepoint.com/:u:/g/personal/s2229215_students_ncl-coll_ac_uk/EVsWt0UGecBGprUr9sxD72wBtRjNy80PEP3MW5knAv_siA?e=Q7BRL6"
+                    class="download-button">Download Now</a>
+
             </div>
             <div class="container">
                 <img src="../images/icons/subnet.webp" alt="Icon" class="icon">
                 <h2>Subnet Calculator</h2>
                 <p>Click the button below to load the page.</p>
                 <a href="../binaries/subnet/index.html" class="download-button">Load Now</a>
-                
+
             </div>
 
         </div>
@@ -317,11 +362,14 @@
                 <img src="../images/icons/skyrim.webp" alt="Icon" class="icon">
                 <h2>Skyrim Legendary Edition</h2>
                 <p>Click the button below to download the binaries.</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/:f:/g/personal/s2229215_students_ncl-coll_ac_uk/Ehctnwp0FmdLoxj5HVqY-6QBXQL2-E14n2ZByjnc2C5wwQ?e=WgVCLt" class="download-button">Download Now</a>
+                <a href="https://livetestnclcollac-my.sharepoint.com/:f:/g/personal/s2229215_students_ncl-coll_ac_uk/Ehctnwp0FmdLoxj5HVqY-6QBXQL2-E14n2ZByjnc2C5wwQ?e=WgVCLt"
+                    class="download-button">Download Now</a>
             </div>
         </div>
     </section>
 
 
 
-</body></html>
+</body>
+
+</html>

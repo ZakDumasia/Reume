@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subnet Calculator</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-size: 90%;
+            background-image: url(../../images/background.webp);
+            background-position: center;
+            display: block;
+            color: #bfbfbf;
+        }
+
+        header {
+            background-color: #00000063;
+            text-align: center;
+            padding: 20px;
+            background-size: contain;
+            background-position: center;
+            display: block;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #1b1b1bdc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            border-left: 5px solid #222222;
+            margin-bottom: 65px;
+        }
+
+        h2 {
+            color: #fff;
+            border-bottom: 2px solid #505050;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            color: #bfbfbf;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 25px;
+            background-color: #2c2c2c;
+            border: 2px solid #4e4e4e;
+            border-radius: 5px;
+            color: #f0f0f0;
+        }
+
+        button {
+            color: #f0f0f0;
+            background-color: #333333;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 2px solid #4e4e4e;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            width: 50%;
+          
+        }
+
+        p {
+            line-height: 2.75;
+            margin-bottom: 15px;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        .result h3 {
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                max-width: 100%;
+                padding: 15px;
+                margin-bottom: 40px;
+            }
+
+            input {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Subnet Calculator</h1>
+    </header>
+
+    <section>
+        <h2>Enter Subnet Information</h2>
+        <label for="ipAddress">IP Address</label>
+        <input type="text" id="ipAddress" placeholder="Enter IP address (e.g. 192.168.1.1)">
+
+        <label for="subnetMask">Subnet Mask</label>
+        <input type="text" id="subnetMask" placeholder="Enter subnet mask (e.g. 255.255.255.0)">
+
+        <button onclick="calculateSubnet()">Calculate</button>
+
+        <div class="result" id="result"></div>
+    </section>
+
+    <section>
+        <h2>Binary Representation</h2>
+        <div id="binaryResult"></div>
+    </section>
+
+    <script>
+        function calculateSubnet() {
+            const ipAddress = document.getElementById("ipAddress").value;
+            const subnetMask = document.getElementById("subnetMask").value;
+
+            if (validateIp(ipAddress) && validateIp(subnetMask)) {
+                const resultDiv = document.getElementById("result");
+                const subnetInfo = calculate(ipAddress, subnetMask);
+                resultDiv.innerHTML = `
+                    <h3>Results:</h3>
+                    <p><strong>Network Address:</strong> ${subnetInfo.networkAddress}</p>
+                    <p><strong>Broadcast Address:</strong> ${subnetInfo.broadcastAddress}</p>
+                    <p><strong>Usable Hosts:</strong> ${subnetInfo.usableHosts}</p>
+                    <p><strong>Subnet Mask:</strong> ${subnetInfo.subnetMask}</p>
+                `;
+
+                // Display binary representation
+                const binaryDiv = document.getElementById("binaryResult");
+                binaryDiv.innerHTML = `
+                    <h3>Binary IP Address:</h3>
+                    <p>${toBinary(ipAddress)}</p>
+                    <h3>Binary Subnet Mask:</h3>
+                    <p>${toBinary(subnetMask)}</p>
+                `;
+            } else {
+                alert("Please enter a valid IP address and subnet mask.");
+            }
+        }
+
+        function validateIp(ip) {
+            const ipRegex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+            return ipRegex.test(ip);
+        }
+
+        function calculate(ipAddress, subnetMask) {
+            // For simplicity, this is a placeholder function
+            // You can replace this logic with actual subnet calculation logic
+            return {
+                networkAddress: "192.168.1.0",
+                broadcastAddress: "192.168.1.255",
+                usableHosts: "254",
+                subnetMask: subnetMask
+            };
+        }
+
+        function toBinary(ip) {
+            return ip.split('.').map(function(num) {
+                return ("00000000" + parseInt(num, 10).toString(2)).slice(-8);
+            }).join('.');
+        }
+    </script>
+</body>
+
+</html>

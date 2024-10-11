@@ -336,6 +336,13 @@
                 <a href="../binaries/subnet/index.html" class="download-button">Load Now</a>
 
             </div>
+            <div class="container">
+                <img src="../images/icons/spotify.svg" alt="Icon" class="icon">
+                <h2>Spotify</h2>
+                <p>Click the button below to download Spotify.</p>
+                <a href="../binaries/spotify/Spotify-Installer.exe" class="download-button">Download Now</a>
+
+            </div>
 
         </div>
     </section>
@@ -359,14 +366,34 @@
             </div>
 
             <div class="container">
-                <img src="../images/icons/skyrim.webp" alt="Icon" class="icon">
-                <h2>Skyrim Legendary Edition</h2>
-                <p>Click the button below to download the binaries.</p>
-                <a href="https://livetestnclcollac-my.sharepoint.com/:f:/g/personal/s2229215_students_ncl-coll_ac_uk/Ehctnwp0FmdLoxj5HVqY-6QBXQL2-E14n2ZByjnc2C5wwQ?e=WgVCLt"
-                    class="download-button">Download Now</a>
+                <img src="../images/icons/fm23.svg" alt="Icon" class="icon">
+                <h2>Football Manager 2023</h2>
+                <label>
+                    <input type="checkbox" id="consent-checkbox">
+                    I confirm that I own a legal copy of Football Manager 2023 and understand that this is not a piracy site.
+                </label>
+                <br>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                   class="download-button" id="download-button" style="pointer-events: none; opacity: 0.5; margin-top: 20px;">Download Now</a>
             </div>
         </div>
     </section>
+    <script>
+        // Get the checkbox and download button elements
+        const consentCheckbox = document.getElementById('consent-checkbox');
+        const downloadButton = document.getElementById('download-button');
+    
+        // Disable download button until checkbox is checked
+        consentCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                downloadButton.style.pointerEvents = 'auto'; // Enable click
+                downloadButton.style.opacity = '1'; // Restore opacity
+            } else {
+                downloadButton.style.pointerEvents = 'none'; // Disable click
+                downloadButton.style.opacity = '0.5'; // Reduce opacity
+            }
+        });
+    </script>
 
 
 

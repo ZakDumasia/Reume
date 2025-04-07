@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography</title>
-
+    <title>Photography Gallery</title>
     <style>
         body {
             font-family: Helvetica, Arial, sans-serif;
-            background-color: #000000;
+            background-color: #000;
             margin: 0;
             padding: 0;
             background-image: url(../images/background.webp);
             background-size: contain;
             background-position: center;
-            display: block;
             color: #bfbfbf;
         }
 
@@ -23,20 +20,20 @@
             background-color: #00000063;
             text-align: center;
             padding: 20px;
-            background-size: contain;
-            background-position: center;
-            display: block;
+        }
+
+        h1 {
+            color: #fff;
         }
 
         section {
-            max-width: 650px;
-            margin: 20px auto;
+            max-width: 950px;
+            margin: 30px auto;
             background-color: #1b1b1b;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
+            box-shadow: 0 0 10px #000;
             border-left: 5px solid #292929;
-            margin-bottom: 65px;
         }
 
         h2 {
@@ -54,14 +51,13 @@
         }
 
         .image-item {
-            flex: 1;
-            min-width: 250px;
-            max-width: 300px;
-            margin: 10px;
+            flex: 1 1 250px;
+            max-width: 280px;
+            text-align: center;
         }
 
         .image-item img {
-            width: 275px;
+            width: 100%;
             border-radius: 5px;
             cursor: pointer;
             transition: transform 0.3s;
@@ -69,6 +65,11 @@
 
         .image-item img:hover {
             transform: scale(1.05);
+        }
+
+        .caption {
+            margin-top: 8px;
+            font-size: 0.95em;
         }
 
         .large-image {
@@ -82,7 +83,6 @@
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             z-index: 1000;
-            overflow: hidden;
         }
 
         .large-image img {
@@ -98,153 +98,104 @@
             cursor: pointer;
             color: #fff;
             font-size: 1.5em;
+            margin-top: 10px;
         }
 
         .close-btn:hover {
-            color: #8d8d8d;
+            color: #ccc;
         }
 
         .button {
-            transition: width 0.3s ease, max-width 0.3s ease, background-color 0.3s ease;
             color: #f0f0f0;
-            width: 200px;
-            max-width: 400px;
-            background-color: #333333;
-            padding: 12px 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
+            background-color: #333;
             border: 2px solid #4e4e4e;
+            padding: 12px;
+            width: 200px;
+            border-radius: 8px;
+            margin: 20px auto 0;
             cursor: pointer;
-            font-size: 16px;
-            display: block;
-            margin: 0 auto;
             text-align: center;
+            transition: 0.3s ease;
         }
 
         .button:hover {
             width: 250px;
-            max-width: 800px;
-        }
-
-        .search-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .search-button {
-            background-color: #333333;
-            border: none;
-            color: #f0f0f0;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-left: 10px;
-            display: flex;
-            align-items: center;
-            transition: transform 0.3s, padding 0.3s;
-        }
-
-        .search-button img {
-            width: 16px;
-            height: 16px;
-            vertical-align: middle;
-        }
-
-        .search-button span {
-            margin-left: 5px;
-        }
-
-        .search-button:hover {
-            transform: scale(1.05);
-            padding: 5px 15px;
+            background-color: #444;
         }
     </style>
 </head>
-
 <body>
     <header>
-        <h1>Photography Gallery</h1>
-        <input id="section" type="button" value="Click to return home" onclick="location.href = '../index.html'"
-            class="button" />
+        <h1>Photography Portfolio</h1>
+        <input type="button" value="Return to Home" onclick="location.href='../index.html'" class="button" />
     </header>
 
+    <!-- Landscape Section -->
     <section>
-        <h2>Buildings and events.</h2>
+        <h2>Cars</h2>
         <div class="image-container">
             <div class="image-item">
-                <div class="search-container">
-                    <p>Monument christmas market.</p>
-                </div>
-                <img src="../images/photography/buildings/grilltower-1.jpg"
-                    onclick="showLargeImage('../images/photography/buildings/grilltower-1.jpg')">
+                <img src="../images/photography/cars/porsche/911.jpg"onclick="showLargeImage(this.src)">
+
+                <div class="caption">Porsche 911</div>
             </div>
             <div class="image-item">
-                <div class="search-container">
-                    <p>Monument christmas market.</p>
-                </div>
-                <img src="../images/photography/buildings/grilltower-2.jpg"
-                    onclick="showLargeImage('../images/photography/buildings/grilltower-2.jpg')">
+                <img src="../images/photography/cars/lamborghini/huracan-2.jpg" onclick="showLargeImage(this.src)" alt="Landscape 2">
+                <div class="caption">Lamborghini Huracan</div>
             </div>
             <div class="image-item">
-                <div class="search-container">
-                    <p>Edexcel Exams</p>
-                    <button class="search-button" onclick="location.href = 'https://qualifications.pearson.com'">
-                        <img src="../images/search-icon.svg" alt="View Official Site">
-                        <span>Visit Official Site</span>
-                    </button>
-                </div>
-                <img src="../images/certificates/0.25x/EDEXEL.webp" alt="EDEXEL"
-                    onclick="showLargeImage('../images/certificates/1x/EDEXEL.webp')">
-            </div>
-            <div class="image-item">
-                <div class="search-container">
-                    <p>OCR Exams</p>
-                    <button class="search-button" onclick="location.href = 'https://ocr.org.uk'">
-                        <img src="../images/search-icon.svg" alt="View Official Site">
-                        <span>Visit Official Site</span>
-                    </button>
-                </div>
-                <img src="../images/certificates/0.25x/OCR.webp" alt="OCR"
-                    onclick="showLargeImage('../images/certificates/1x/OCR.webp')">
-            </div>
-            <div class="image-item">
-                <div class="search-container">
-                    <p>Eduqas Exams</p>
-                    <button class="search-button" onclick="location.href = 'https://wjec.co.uk'">
-                        <img src="../images/search-icon.svg" alt="View Official Site">
-                        <span>Visit Official Site</span>
-                    </button>
-                </div>
-                <img src="../images/certificates/0.25x/WJEC-CBAC.webp" alt="WJEC-CBAC"
-                    onclick="showLargeImage('../images/certificates/1x/WJEC-CBAC.webp')">
+                <img src="../images/photography/cars/lamborghini/huracan-1.jpg"onclick="showLargeImage(this.src)">
+
+                <div class="caption">Lamborghini Huracan</div>
             </div>
         </div>
     </section>
-    <section style="size: 80%;">
-        <h2>T-Level (Course Incomplete)</h2>
+
+    <!-- Portrait Section -->
+    <section>
+        <h2>Portraits</h2>
+        <div class="image-container">
+            <div class="image-item">
+                <img src="../images/gallery/portrait1.jpg" onclick="showLargeImage(this.src)" alt="Portrait 1">
+                <div class="caption">Candid shot in natural light</div>
+            </div>
+            <div class="image-item">
+                <img src="../images/gallery/portrait2.jpg" onclick="showLargeImage(this.src)" alt="Portrait 2">
+                <div class="caption">Studio style with soft shadows</div>
+            </div>
+        </div>
     </section>
 
-    <div class="overlay" id="overlay" onclick="closeLargeImage()"></div>
+    <!-- Macro Section -->
+    <section>
+        <h2>Macro</h2>
+        <div class="image-container">
+            <div class="image-item">
+                <img src="../images/gallery/macro1.jpg" onclick="showLargeImage(this.src)" alt="Macro 1">
+                <div class="caption">Dew on a petal</div>
+            </div>
+            <div class="image-item">
+                <img src="../images/gallery/macro2.jpg" onclick="showLargeImage(this.src)" alt="Macro 2">
+                <div class="caption">Close-up of a bee</div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Popup Viewer -->
     <div class="large-image" id="largeImageContainer">
         <span class="close-btn" onclick="closeLargeImage()">Close &times;</span>
-        <img id="largeImage" src="" alt="Large GCSE Image">
+        <img id="largeImage" src="" alt="Expanded View">
     </div>
 
     <script>
         function showLargeImage(src) {
             document.getElementById('largeImage').src = src;
             document.getElementById('largeImageContainer').style.display = 'block';
-            document.getElementById('overlay').style.display = 'block';
         }
 
         function closeLargeImage() {
             document.getElementById('largeImageContainer').style.display = 'none';
-            document.getElementById('overlay').style.display = 'none';
         }
     </script>
-
 </body>
-
 </html>

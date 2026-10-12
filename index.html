@@ -1,314 +1,140 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Zak Dumasia specialising in Digital Infrastructure & Support Services. Learn more about me and explore my skills, projects, and experience." />
-    <title>Zak Dumasia's Resume</title>
+    <meta name="description" content="Educational portfolio of Zak Dumasia, a Networking and Cyber Security student at Newcastle College University Centre, documenting academic studies, IT projects and technical experience.">
+    <meta name="category" content="Education">
+    <meta name="classification" content="Education">
+    <meta name="subject" content="Higher Education, Networking, Cyber Security, IT">
+    <meta name="topic" content="Education">
+    <meta name="keywords" content="Education, Student Portfolio, Newcastle College, Networking, Cyber Security, IT">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Zak Dumasia | Education & IT Portfolio">
+    <meta property="og:description" content="Educational portfolio documenting studies in Networking, Cyber Security and Digital Infrastructure.">
+    <meta property="og:url" content="https://zakdumasia.co.uk/">
+    <title>Zak Dumasia | Education & IT Portfolio</title>
     <style>
-        body {
-            font-family: Helvetica, Arial, sans-serif;
-            background-color: #000000;
-            margin: 0;
-            padding: 0;
-            background-size: cover;
-            background-size: 90%;
-            background-image: url(./images/background.webp);
-            background-position: center;
-            display: block;
-            color: #bfbfbf;
-        }
-
-        .education-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .education-item {
-            flex: 1;
-            min-width: 350px;
-            padding: 10px;
-        }
-
-        header {
-            background-color: #00000063;
-            text-align: center;
-            padding: 20px;
-            background-size: contain;
-            background-position: center;
-            display: block;
-        }
-
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #1b1b1bdc;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            border-left: 5px solid #222222;
-            margin-bottom: 65px;
-        }
-
-        h2 {
-            color: #fff;
-            border-bottom: 2px solid #505050;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        h3 {
-            color: #fff;
-        }
-
-        p {
-            line-height: 2.75;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-
-        .margin {
-            margin-left: 3%;
-        }
-
-        .button {
-            color: #f0f0f0;
-            max-width: 800px;
-            background-color: #333333;
-            padding: 7px 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            border: 2px solid #4e4e4e;
-            cursor: pointer;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
-
-        .button:hover {
-            padding: 13px
-        }
-
-        li {
-            margin-left: 2%;
-        }
-
-        /* Edit: Made it so mobile viewers can view it without going all over the place */
+        body { font-family: Helvetica, Arial, sans-serif; background-color: #000000; margin: 0; padding: 0; background-size: 90%; background-image: url(./images/background.webp); background-position: center; display: block; color: #bfbfbf; }
+        .education-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
+        .education-item { flex: 1; min-width: 350px; padding: 10px; }
+        header { background-color: #00000063; text-align: center; padding: 20px; background-size: contain; background-position: center; display: block; }
+        section { max-width: 800px; margin: 20px auto; background-color: #1b1b1bdc; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; border-left: 5px solid #222222; margin-bottom: 65px; }
+        h2 { color: #fff; border-bottom: 2px solid #505050; padding-bottom: 10px; margin-bottom: 20px; }
+        h3 { color: #fff; }
+        p { line-height: 2.75; margin-bottom: 15px; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 5px; margin-left: 2%; }
+        .margin { margin-left: 3%; }
+        .button { color: #f0f0f0; max-width: 800px; background-color: #333333; padding: 7px 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); border-radius: 8px; border: 2px solid #4e4e4e; cursor: pointer; font-size: 16px; transition: all 0.3s ease; }
+        .button:hover { padding: 13px; }
         @media (max-width: 768px) {
-            body {
-                background-size: cover;
-                background-size: 100%;
-                padding: 10px;
-            }
-
-            header {
-                padding: 15px;
-            }
-
-            h1 {
-                font-size: 22px;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
-
-            h3 {
-                font-size: 18px;
-            }
-
-            li {
-                font-size: 16px;
-            }
-
-            section {
-                max-width: 100%;
-                padding: 15px;
-                margin-bottom: 40px;
-            }
-
-            .education-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .education-item {
-                min-width: 100%;
-                padding: 10px;
-            }
-
-            .button {
-                width: 100%;
-                font-size: 14px;
-            }
-
-            #popup {
-                width: 80%;
-                padding: 30px;
-            }
-
-
+            body { background-size: 100%; padding: 10px; }
+            header { padding: 15px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 20px; }
+            h3 { font-size: 18px; }
+            li { font-size: 16px; }
+            section { max-width: 100%; padding: 15px; margin-bottom: 40px; }
+            .education-container { flex-direction: column; gap: 20px; }
+            .education-item { min-width: 0; padding: 10px; }
+            .button { width: 100%; font-size: 14px; }
+            #popup { width: 80%; padding: 30px; box-sizing: border-box; }
         }
     </style>
-        <script type="application/ld+json">
-          {
-            "@context": "http://schema.org",
-            "@type": "Person",
-            "name": "Zak Dumasia",
-            "url": "https://zakdumasia.co.uk/",
-            "sameAs": [
-              "https://www.linkedin.com/in/zak-dumasia",
-            ],
-            "jobTitle": "IT Technician & Digital Infrastructure Specialist",
-            "description": "Zak Dumasia is an IT student specializing in digital infrastructure, networking, and technical support services.",
-            "image": "https://zakdumasia.co.uk/profile-image.jpg"
-          }
-        </script>
-      
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "url": "https://zakdumasia.co.uk/",
+      "name": "Zak Dumasia | Education & IT Portfolio",
+      "about": {
+        "@type": "Person",
+        "name": "Zak Dumasia",
+        "url": "https://zakdumasia.co.uk/",
+        "sameAs": ["https://www.linkedin.com/in/zak-dumasia"],
+        "jobTitle": "IT Technician & Digital Infrastructure Specialist",
+        "description": "Networking and Cyber Security student at Newcastle College University Centre with experience in digital infrastructure, networking and technical support.",
+        "image": "https://zakdumasia.co.uk/profile-image.jpg",
+        "affiliation": {"@type": "CollegeOrUniversity", "name": "Newcastle College University Centre"}
+      },
+      "educationalUse": "Student portfolio"
+    }
+    </script>
 </head>
-
 <body>
     <header>
         <h1>Zak Dumasia's Resume</h1>
-        <h1 style="font-size: small; color: #969696;">Contact: zakdumasia2007@hotmail.com | Phone: 07389 083225 |
-            Location: South Tyneside</h1>
+        <h1 style="font-size: small; color: #969696;">Contact: zakdumasia2007@hotmail.com | Phone: 07389 083225 | Location: South Tyneside</h1>
     </header>
-<section>
+    <main>
+    <section>
         <h2>About Me</h2>
-        <ul>
-            <li>Hi, I am student at Newcastle College. The course i am doing is the T-Level digital infrastructure and support services. This course is helping me achieve my dream of working in the IT field by experimenting with more than just the fundamentals of networking and IT infrastructure. </li>
-        </ul>
+        <ul><li>I am a Networking and Cyber Security student at Newcastle College University Centre, building on my previous T-Level studies in Digital Infrastructure and Support Services. My academic work and practical experience cover networking, IT infrastructure, digital security and technical support.</li></ul>
     </section>
     <section>
         <h2>Education</h2>
         <div class="education-container">
             <div class="education-item">
-                <h3>T-Level In Digital Infrastructure and Support Services</h3>
-                <h4>Newcastle College - September 2023 to Present</h4>
+                <h3>FdSc Networking and Cyber Security</h3>
+                <h4>Newcastle College University Centre — September 2025 to Present</h4>
+                <h4>Areas of Study:</h4>
+                <ul><li>• Computer Networking</li><li>• Cyber Security</li><li>• Digital Infrastructure</li><li>• Systems and Network Administration</li></ul>
+                <h3>T-Level in Digital Infrastructure and Support Services</h3>
+                <h4>Newcastle College — September 2023 to 2025</h4>
                 <h4>Key Subjects:</h4>
-                <ul>
-                    <li>• Digital Security</li>
-                    <li>• Digital Analysis</li>
-                    <li>• Application Testing</li>
-                    <li>• Business Studies</li>
-                </ul>
+                <ul><li>• Digital Security</li><li>• Digital Analysis</li><li>• Application Testing</li><li>• Business Studies</li></ul>
             </div>
             <div class="education-item">
                 <h3>General Certificate of Secondary Education</h3>
-                <h4>Hebburn Comprehensive - September 2018 to 2023</h4>
+                <h4>Hebburn Comprehensive — September 2018 to 2023</h4>
                 <h4>Achieved Grades:</h4>
-                <ul>
-                    <li>• Combined Science: 7 and 6</li>
-                    <li>• Maths: 5</li>
-                    <li>• English Language: 4</li>
-                    <li>• Literature: 4</li>
-                    <li>• Music: 6</li>
-                    <li>• Business Studies: 6</li>
-                    <li>• Geography: 4</li>
-                    <li>• French: 3</li>
-                </ul>
+                <ul><li>• Combined Science: 7 and 6</li><li>• Maths: 5</li><li>• English Language: 4</li><li>• Literature: 4</li><li>• Music: 6</li><li>• Business Studies: 6</li><li>• Geography: 4</li><li>• French: 3</li></ul>
             </div>
         </div>
     </section>
-
     <section>
         <h2>Work Experience</h2>
         <h3>IT Technician at Queen Elizabeth Hospital</h3>
-        <p>From July 1st 2024 To September 2nd </p>
-        <ul>
-            <li>
-                Over the length of my placement at Queen Elizabeth Hospital, I have located and repaired over 150
-                devices for the trust. Furthermore, I now understand how businesses should communicate with their
-                clients face to face. While I mostly talked with ward managers, I did have the opportunity to interact
-                with nurses and other hospital staff.
-            </li>
-        </ul>
+        <p>From July 1st 2024 to September 2nd 2024</p>
+        <ul><li>Over the length of my placement at Queen Elizabeth Hospital, I located and repaired over 150 devices for the trust. I developed my face-to-face communication skills while working with ward managers, nurses and other hospital staff.</li></ul>
         <div id="moreText" style="display:none;">
-            <ul>
-                <li>
-                    Because of the large volume of work that needed to be completed, project time management was one of
-                    the most important skills I developed during my placement.
-                    The Q.E hospital is fairly huge, therefore travelling across it can be time-consuming and difficult
-                    to navigate. However, I was able to engage with my colleagues to develop the most efficient
-                    techniques to repair and distribute devices around the trust.
-                </li>
-            </ul>
+            <ul><li>Because of the large volume of work that needed to be completed, project time management was one of the most important skills I developed during my placement. Travelling across the hospital could be time-consuming, so I worked with colleagues to develop efficient ways to repair and distribute devices across the trust.</li></ul>
         </div>
-        <button id="moreBtn" style="margin-left: 2%; color: #f0f0f0; background: none; border: none; padding: 0; font-size: 12px; cursor: pointer;">Show More</button>
-
+        <button id="moreBtn" type="button" aria-expanded="false" aria-controls="moreText" style="margin-left: 2%; color: #f0f0f0; background: none; border: none; padding: 0; font-size: 12px; cursor: pointer;">Show More</button>
     </section>
-
     <section>
         <h2>Skills</h2>
-        <ul>
-            <li>• Microsoft Windows Server.</li>
-            <li>• Cisco Routing and Switching</li>
-            <li>• Network Planning and implementation</li>
-            <li>• Communication with technical and non-technical peers</li>
-        </ul>
+        <ul><li>• Microsoft Windows Server</li><li>• Cisco Routing and Switching</li><li>• Network Planning and Implementation</li><li>• Communication with technical and non-technical peers</li></ul>
     </section>
-
     <section>
         <h2>References</h2>
-        <ul>
-            <li><b>Holly Richardson: Newcastle College</b></li>
-            <li><b>Role:</b> Programme Leader for Level 4 & 5 Networking and Cyber Security</li>
-            <li><b>Email:</b> Holly.Richardson@ncl-coll.ac.uk</li>
-            <li><b>Phone:</b> (+44) 0191-200-4911</li>
-        </ul>
-        <ul>
-            <li><b>Angela Murray: NHS</b></li>
-            <li><b>Role:</b>Digital Services operational Manager</li>
-            <li><b>Email:</b>angela.murray13@nhs.net</li>
-            <li><b>Phone:</b> (+44) 07539 569820</li>
-        </ul>
-        
+        <ul><li><b>Holly Richardson: Newcastle College</b></li><li><b>Role:</b> Programme Leader for Level 4 & 5 Networking and Cyber Security</li><li><b>Email:</b> Holly.Richardson@ncl-coll.ac.uk</li><li><b>Phone:</b> (+44) 0191-200-4911</li></ul>
+        <ul><li><b>Angela Murray: NHS</b></li><li><b>Role:</b> Digital Services Operational Manager</li><li><b>Email:</b> angela.murray13@nhs.net</li><li><b>Phone:</b> (+44) 07539 569820</li></ul>
     </section>
-
-    <div id="popup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #333; color: #fff; padding: 60px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); z-index: 1000;">
+    </main>
+    <div id="popup" role="dialog" aria-modal="true" aria-label="Student ID information" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #333; color: #fff; padding: 60px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); z-index: 1000;">
         <div id="popup-content"></div>
-        <button onclick="document.getElementById('popup').style.display='none'" style="margin-top: 10px; background-color: #555; color: #fff; border: none; padding: 5px 10px; cursor: pointer; margin-left: 40%;">Close</button>
+        <button id="closePopup" type="button" style="margin-top: 10px; background-color: #555; color: #fff; border: none; padding: 5px 10px; cursor: pointer; margin-left: 40%;">Close</button>
     </div>
-
     <script>
-        document.getElementById("moreBtn").addEventListener("click", function () {
-            var moreText = document.getElementById("moreText");
-            if (moreText.style.display === "none") {
-                moreText.style.display = "block";
-                this.textContent = "Show Less";
-            } else {
-                moreText.style.display = "none";
-                this.textContent = "Show More";
-            }
+        document.getElementById('moreBtn').addEventListener('click', function () {
+            const moreText = document.getElementById('moreText');
+            const opening = moreText.style.display === 'none';
+            moreText.style.display = opening ? 'block' : 'none';
+            this.textContent = opening ? 'Show Less' : 'Show More';
+            this.setAttribute('aria-expanded', String(opening));
         });
-        function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
-
         function showPopup(message) {
-            const popup = document.getElementById('popup');
-            const popupContent = document.getElementById('popup-content');
-            popupContent.innerText = message;
-            popup.style.display = 'block';
+            document.getElementById('popup-content').textContent = message;
+            document.getElementById('popup').style.display = 'block';
         }
-
-        window.onload = function () {
-            const studentParam = getQueryParam('student');
-            if (studentParam !== null) {
-                showPopup('Hmm, it seems you found my ID card!');
-            }
+        document.getElementById('closePopup').addEventListener('click', function () {
+            document.getElementById('popup').style.display = 'none';
+        });
+        if (new URLSearchParams(window.location.search).has('student')) {
+            showPopup('Hmm, it seems you found my ID card!');
         }
     </script>
-
-
-</body></html>
-
+</body>
+</html>
